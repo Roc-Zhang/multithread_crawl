@@ -4,6 +4,7 @@ import requests
 from lxml import etree
 import json
 
+
 headers = {'User-Agent': 'Mozilla/5.0 (X11; CrOS i686 3912.101.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36'}
 q=Queue()
 base_url = r"https://www.qiushibaike.com/text/{}"
@@ -26,8 +27,6 @@ class Mythread(Thread):
             content=html.xpath("//div[@class='content']/span/text()")
             print(content)
             
-
-
 
 if __name__ == "__main__":
     for i in range(1,4):
