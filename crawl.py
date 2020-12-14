@@ -39,7 +39,8 @@ class Mythread(Thread):
                 f.write(json.dumps(content,ensure_ascii=False))
                 f.write("\n")
                 print(content)
-        print(content)
+        lock.release()
+        
 
 
 
